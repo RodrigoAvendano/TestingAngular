@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Input Example</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
+
 <body>
-    
+    <script src="lib/angular.js"></script>
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/jquery-3.6.0.min.js"></script>
+
+    <div ng-app="DemoApp" ng-controller="DemoController">
+        <label for="tutorialinput" class="tutorial">Tutorial Name</label>
+        <input type="text" ng-model="tutorialName" class="tutorialinput">
+        <br>
+        <label class="result">This course is about {{tutorialName}} </label>
+        <br>
+        <label for="tutorialinput" class="tutorial">Weekday</label>
+        <input type="text" ng-model="weekday" class="tutorialinput">
+        <br>
+        <label class="result">Today is {{weekday}} </label>
+    </div>
+
+    <script src="lib/app.js"></script>
+
+    <!-- <script>
+        const app = angular.module('DemoApp', [])
+        app.controller('DemoController', function ($scope) {
+            $scope.tutorialName = "Angular.js"
+        })
+    </script> -->
 </body>
+
 </html>
